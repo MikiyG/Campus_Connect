@@ -15,15 +15,32 @@ Campus Connect is a **PHP & MySQL web application** built to connect students ac
 ---
 
 ## 📄 Pages Overview
-- **Homepage** – Landing page with project introduction and quick links.
-![Homepage](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/homepage.png)
 
-- **Login / Signup** – Secure authentication for students.  
+- **Homepage** – Landing page with project introduction and quick links.  
+  ![Homepage](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/homepage.png)
+
+- **Login Page** – Secure login for students.  
+  ![Login](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/login.png)
+
+- **Signup Page** – Register new student accounts.  
+  ![Signup](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/signup.png)
+
 - **Dashboard** – Personalized hub for managing events, groups, and messages.  
+  ![Dashboard](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/dashboard.png)
+
 - **Events Page** – Create, view, and register for campus events.  
+  ![Events](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/events.png)
+
 - **Groups Page** – Create or join student groups.  
+  ![Groups](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/groups.png)
+
 - **Messages Page** – Private and group messaging.  
+  ![Messages](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/messages.png)
+
 - **Admin Panel** – Manage users, events, groups, and system settings.  
+  ![Admin](https://raw.githubusercontent.com/MikiyG/Campus_Connect/master/admin.png)
+
+
 
 ---
 
