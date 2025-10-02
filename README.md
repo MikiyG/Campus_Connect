@@ -55,4 +55,4 @@ Campus Connect is a **PHP & MySQL web application** built to connect students ac
 ## 🚀 Installation & Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/campus-connect.git
+   git clone https://github.com/MikiyG/campus-connect.git
