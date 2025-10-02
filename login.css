@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top-bar {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #111;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.header {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #FFD700;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav-hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #FFD700;
+  transition: all 0.3s ease;
+}
+
+.nav-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.nav a {
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #FFD700;
+}
+
+.login-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.custom-input {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.custom-input::placeholder {
+  color: #6B7280;
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none !important; /* Hide top bar entirely on mobile */
+  }
+
+  .header {
+    position: relative; /* Ensure hamburger positioning is relative to header */
+  }
+
+  .nav-hamburger {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header .logo {
+    font-size: 1.5rem; /* Smaller size for mobile */
+    line-height: 1;
+    margin: 0 auto;
+    padding-right: 50px; /* Prevent overlap with hamburger */
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    z-index: 999;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  .nav.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav a {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .login-section {
+    padding: 2rem 1rem;
+  }
+}

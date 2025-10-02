@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #000000 50%, #1a1a1a 100%);
+  color: #FFFFFF;
+}
+
+.top-bar {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #1a1a1a;
+  gap: 15px;
+  border-bottom: 2px solid #FFD700;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #FFD700, #D4AF37);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.header {
+  background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+  border-bottom: 2px solid #FFD700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav-hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #FFD700;
+  transition: all 0.3s ease;
+}
+
+.nav-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.nav a {
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #FFD700;
+}
+
+.welcome-message {
+  animation: slideIn 0.5s ease-out;
+}
+
+.typed-welcome {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.custom-input, .custom-select {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #1F2937;
+  border: 1px solid #FFD700;
+  border-radius: 8px;
+  padding: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-input:focus, .custom-select:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.custom-input::placeholder {
+  color: #6B7280;
+  opacity: 1;
+}
+
+.custom-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23D4AF37'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding-right: 2rem;
+}
+
+.custom-select option {
+  background-color: #1F2937;
+  color: #FFFFFF;
+}
+
+.custom-select option:disabled {
+  color: #6B7280;
+}
+
+.custom-select::-ms-expand {
+  display: none;
+}
+
+.tab-button {
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #FFD700;
+  color: #FFD700;
+}
+
+.tab-button:hover {
+  color: #FFD700;
+}
+
+.modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.id-preview:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.id-preview {
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.table-row {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.tab-content {
+  animation: fadeInOut 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInOut {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dashboard-card {
+  background: linear-gradient(to right, #000000, #1F2937);
+  transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 10px #FFD700;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #1F2937;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #FFD700;
+  animation: grow 1s ease-out;
+}
+
+@keyframes grow {
+  from { width: 0; }
+  to { width: var(--progress); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none !important;
+  }
+
+  .header {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .header .logo {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0 auto;
+    padding-right: 50px;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    z-index: 999;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  .nav.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav a {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .welcome-message {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .timestamp {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    font-size: 0.8rem;
+    color: #6B7280;
+    margin-top: 5px;
+  }
+
+  .tab-buttons {
+    display: none;
+  }
+}
